@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="十二種質性研究方法的特性整理、引導性問題與研究資源比較，供研究生選方法與寫第三章前自我檢核。">
+<title>質性方法引導問題</title>
+<style>
+:root{
+  --sans:"PingFang TC","Noto Sans TC","Microsoft JhengHei",-apple-system,system-ui,sans-serif;
+  --bg:#f6f7f9;--panel:#fff;--panel2:#fbfcfd;--ink:#1f2430;--muted:#5f6b7a;--line:#e6e9ef;
+  --teal:#0e9891;--teal-deep:#0e7c74;--teal-soft:#e8f4f3;--teal-line:#c9e4e1;
+  --purple:#8a53c9;--purple-soft:#f3edfb;--purple-line:#e0d0f2;
+  --amber:#b07a12;--amber-soft:#fdf4e3;--amber-line:#eeddb4;
+  --navy:#1b3a6b;
+  --l1:#e7f4ea;--l2:#f1f5dc;--l3:#fdf3dc;--l4:#fbe5d3;--l5:#f8d7d7;--l6:#f0c4c8;
+  --shadow:0 1px 3px rgba(20,30,45,.06),0 6px 18px rgba(20,30,45,.05);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1319;--panel:#171c25;--panel2:#1b212c;--ink:#e8ebf1;--muted:#9aa6b6;--line:#28303c;
+  --teal:#37c2b6;--teal-deep:#37c2b6;--teal-soft:#12312f;--teal-line:#1d4a46;
+  --purple:#b78bec;--purple-soft:#2a2038;--purple-line:#3d2f52;
+  --amber:#e0ab4a;--amber-soft:#2e2413;--amber-line:#463719;--navy:#9db9e6;
+  --l1:#16301d;--l2:#283016;--l3:#352b12;--l4:#3a2617;--l5:#3d1d1f;--l6:#4a1d24;
+  --shadow:0 1px 3px rgba(0,0,0,.4),0 8px 22px rgba(0,0,0,.35);}}
+:root[data-theme="dark"]{
+  --bg:#0f1319;--panel:#171c25;--panel2:#1b212c;--ink:#e8ebf1;--muted:#9aa6b6;--line:#28303c;
+  --teal:#37c2b6;--teal-deep:#37c2b6;--teal-soft:#12312f;--teal-line:#1d4a46;
+  --purple:#b78bec;--purple-soft:#2a2038;--purple-line:#3d2f52;
+  --amber:#e0ab4a;--amber-soft:#2e2413;--amber-line:#463719;--navy:#9db9e6;
+  --l1:#16301d;--l2:#283016;--l3:#352b12;--l4:#3a2617;--l5:#3d1d1f;--l6:#4a1d24;
+  --shadow:0 1px 3px rgba(0,0,0,.4),0 8px 22px rgba(0,0,0,.35);}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:var(--teal-deep)}
+.mast{background:var(--panel);border-bottom:1px solid var(--line)}
+.mast .inner{max-width:1080px;margin:0 auto;padding:12px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.mast .uni{font-size:.8rem;color:var(--muted)}.mast .course{font-weight:800}
+.spacer{flex:1}
+.btn{border:1px solid var(--line);background:var(--panel2);color:var(--ink);font:inherit;font-size:.82rem;border-radius:999px;padding:5px 13px;cursor:pointer}
+.btn:hover{border-color:var(--teal-line)}
+.btn.pri{background:var(--teal-deep);border-color:var(--teal-deep);color:#fff}
+header.hero{background:linear-gradient(135deg,#0e7c74 0%,#12a79c 55%,#7a4fb6 140%);color:#fff;padding:30px 0 26px}
+header.hero .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.34);border-radius:999px;padding:2px 13px;font-size:.76rem;letter-spacing:.1em;margin-bottom:8px}
+header.hero h1{font-size:1.55rem;margin-bottom:6px}
+header.hero p{opacity:.95;font-size:.93rem;max-width:860px}
+nav.tabs{position:sticky;top:0;z-index:50;background:var(--panel);border-bottom:1px solid var(--line);box-shadow:0 1px 8px rgba(20,30,45,.05)}
+nav.tabs .inner{max-width:1080px;margin:0 auto;display:flex;gap:2px;padding:0 8px;overflow-x:auto;scrollbar-width:none}
+nav.tabs .inner::-webkit-scrollbar{display:none}
+nav.tabs button{border:0;background:none;font:inherit;font-size:.9rem;padding:12px 12px;cursor:pointer;color:var(--muted);border-bottom:3px solid transparent;white-space:nowrap}
+nav.tabs button.on{color:var(--teal-deep);border-bottom-color:var(--teal);font-weight:700}
+main{max-width:1080px;margin:0 auto;padding:20px 16px 70px}
+.tabsec{display:none}.tabsec.on{display:block}
+h2.sec{font-size:1.25rem;color:var(--navy);margin:8px 0 6px}
+.lead{color:var(--muted);font-size:.92rem;margin-bottom:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);margin-bottom:14px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:10px 0}
+.step{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:12px;padding:12px 14px}
+.step b{display:block;margin-bottom:2px}.step span{font-size:.86rem;color:var(--muted)}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.pill{font:inherit;font-size:.86rem;padding:4px 12px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.pill.lv-取徑{border-color:var(--teal-line)}.pill.lv-技術{border-color:var(--purple-line)}.pill.lv-簡介{border-color:var(--amber-line)}
+.pill.on{background:var(--teal-deep);border-color:var(--teal-deep);color:#fff}
+.lvl{font-size:.75rem;color:var(--muted);margin:0 2px 0 6px}
+.mhead{background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--teal);border-radius:14px;padding:14px 18px;margin-bottom:12px;box-shadow:var(--shadow)}
+.mhead.lv-技術{border-left-color:var(--purple)}.mhead.lv-簡介{border-left-color:var(--amber)}
+.mhead h2{font-size:1.35rem;margin:4px 0}.mhead h2 i{font-size:.85rem;color:var(--muted);font-style:normal;font-weight:400}
+.lvtag{font-size:.72rem;padding:1px 8px;border-radius:6px;background:var(--teal-soft);color:var(--teal-deep)}
+.lv-技術 .lvtag{background:var(--purple-soft);color:var(--purple)}.lv-簡介 .lvtag{background:var(--amber-soft);color:var(--amber)}
+h3.sub{font-size:1rem;color:var(--teal-deep);margin:4px 0 8px}
+ul.feat{list-style:none}
+ul.feat li{padding:4px 0 4px 18px;position:relative;font-size:.94rem}
+ul.feat li::before{content:"";position:absolute;left:3px;top:.85em;width:6px;height:6px;border-radius:50%;background:var(--teal)}
+.qgroup{margin-top:10px}
+.qgroup h4{font-size:.82rem;letter-spacing:.12em;color:var(--muted);margin:12px 0 6px}
+.q{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:8px;background:var(--panel2)}
+.q .qt{display:flex;gap:10px;align-items:flex-start}
+.qn{flex:none;display:inline-grid;place-items:center;min-width:26px;height:26px;border-radius:50%;background:var(--teal-deep);color:#fff;font-size:.8rem;font-weight:700}
+:root[data-theme="dark"] .qn{color:#0f1319}
+.q .qx{flex:1;font-size:.95rem}
+.q textarea{display:none;width:100%;margin-top:8px;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:inherit;font-size:.9rem;line-height:1.6;resize:vertical;min-height:70px}
+.q.open textarea{display:block}
+.q .tg{border:0;background:none;color:var(--teal-deep);font:inherit;font-size:.8rem;cursor:pointer;white-space:nowrap}
+.q.has .tg::after{content:" ✓"}
+.prog{font-size:.85rem;color:var(--muted);margin:6px 0 12px}
+.navrow{display:flex;justify-content:space-between;gap:8px;margin-top:14px;flex-wrap:wrap}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);margin:10px 0 16px;background:var(--panel)}
+table.cmp{border-collapse:collapse;width:100%;min-width:860px;font-size:.86rem}
+table.cmp th,table.cmp td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:var(--teal-soft);color:var(--teal-deep);white-space:nowrap;position:sticky;top:0}
+table.cmp td:first-child{font-weight:700;white-space:nowrap;background:var(--panel)}
+table.cmp td .lv{display:inline-block;font-size:.76rem;font-weight:700;border-radius:6px;padding:0 7px;margin-bottom:3px}
+table.cmp td .nt{display:block;color:var(--muted);font-size:.8rem;line-height:1.55}
+.c1{background:var(--l1)}.c2{background:var(--l2)}.c3{background:var(--l3)}.c4{background:var(--l4)}.c5{background:var(--l5)}.c6{background:var(--l6)}
+.legend{display:flex;flex-wrap:wrap;gap:6px;font-size:.78rem;color:var(--muted);align-items:center}
+.legend span{padding:1px 8px;border-radius:6px;color:var(--ink)}
+.notes li{margin:4px 0 4px 1.2em;font-size:.9rem}
+.foot{text-align:center;color:var(--muted);font-size:.8rem;padding:20px}
+.warn{color:var(--amber);font-size:.82rem}
+@media(max-width:640px){header.hero h1{font-size:1.3rem}.mhead h2{font-size:1.15rem}}
+@media print{.mast .btn,nav.tabs,.pills,.navrow,.q .tg{display:none!important}
+  .tabsec{display:block!important;break-before:page}.q textarea{display:block;border:1px solid #999}}
+</style>
+</head>
+<body>
+<div class="mast"><div class="inner">
+  <div><div class="uni">國立臺灣師範大學　National Taiwan Normal University</div>
+  <div class="course">115 學年度第一學期　教育與社會科學研究法</div></div>
+  <div class="spacer"></div>
+  <button class="btn" id="exp">⬇ 匯出我的作答</button>
+  <button class="btn" id="theme">🌙 深色</button>
+</div></div>
+<header class="hero"><div class="wrap">
+  <span class="badge">研究設計自我檢核</span>
+  <h1>質性研究方法特性與引導性問題</h1>
+  <p>十二種質性研究方法的特性整理、分階段的引導性問題，以及時間、人力、技術、空間、經費五個面向的資源比較。可以搭配<a href="index.html" style="color:#fff;text-decoration:underline">「質性研究方法參考」網站</a>的方法卡閱讀。</p>
+</div></header>
+<nav class="tabs"><div class="inner">
+  <button data-tab="home" class="on">🗺 使用說明</button>
+  <button data-tab="m">🔎 方法特性與問題</button>
+  <button data-tab="cmp">📊 研究資源比較</button>
+  <button data-tab="cross">🧩 綜合思考題</button>
+</div></nav>
+<main>
+
+<section class="tabsec on" id="tab-home">
+  <h2 class="sec">使用說明</h2>
+  <p class="lead" id="intro"></p>
+  <div class="steps">
+    <div class="step"><b>1　定位</b><span>確認研究問題與這個方法的邏輯是否相合。</span></div>
+    <div class="step"><b>2　設計</b><span>思考研究對象、邊界、研究者位置。</span></div>
+    <div class="step"><b>3　執行</b><span>預想資料怎麼來、怎麼分析。</span></div>
+    <div class="step"><b>4　品質與倫理</b><span>預想口委會怎麼問，以及參與者可能承擔的風險。</span></div>
+  </div>
+  <div class="card">
+    <p>建議用法是先自己作答，再帶著答案和指導教授或同儕討論。答不出來的題目，通常就是研究設計還沒想清楚的地方。</p>
+    <p style="margin-top:8px">取徑（個案、紮根理論、敘事、口述史、行動研究、歷史比較）與技術（訪談、焦點團體、參與觀察、影像發聲）要分開思考，第三章先交代取徑，再說明在此取徑下用了哪些技術。</p>
+    <p style="margin-top:8px">每一題都可以按「寫下想法」作答。作答內容只存在這台裝置的瀏覽器中，不會上傳；寫完請按右上角「匯出我的作答」存成文字檔。<span class="warn" id="lsnote"></span></p>
+  </div>
+  <h2 class="sec" style="margin-top:18px">從這裡開始</h2>
+  <div class="pills" id="homepills"></div>
+</section>
+
+<section class="tabsec" id="tab-m">
+  <div class="pills" id="mpills"></div>
+  <div id="mbody"></div>
+</section>
+
+<section class="tabsec" id="tab-cmp">
+  <h2 class="sec">研究資源比較</h2>
+  <p class="lead">以碩士論文規模估計，投入最高的是民族誌、歷史比較研究、影像發聲與行動研究，相對精簡的是深度訪談、現象學與敘事研究。下表以顏色標示相對程度，並附估計依據，供評估可行性時參考。</p>
+  <div class="legend">程度　<span class="c1">低</span><span class="c2">低至中</span><span class="c3">中</span><span class="c4">中至高</span><span class="c5">高</span><span class="c6">最高</span>　空間範圍以文字說明，不分級。</div>
+  <div class="tw"><table class="cmp" id="cmptable"></table></div>
+  <div class="card">
+    <h3 class="sub">閱讀提醒</h3>
+    <ul class="notes">
+      <li>表中程度為本課整理的經驗估計，讀本沒有逐項比較；有出處的數字僅包括轉譯時間（潘・簡報 Ch7 第 37 張）與寫筆記時間（Neuman 2014 pp. 559、582–583）。</li>
+      <li>取徑的資源需求會隨搭配的技術改變，例如個案研究若以參與觀察為主，時間與人力都會往上調。</li>
+      <li>對碩士生而言，最常低估的是時間，尤其是轉譯、等待同意與進場協商；最常低估的人力是協同夥伴、第二分析者與助理主持人。</li>
+      <li>評估可行性時，請先找出自己設計中最耗資源的那一欄，再回頭看研究問題能否縮小，或改用資源需求較低、仍能回答問題的方法。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="tabsec" id="tab-cross">
+  <h2 class="sec">跨方法的綜合思考題</h2>
+  <p class="lead">適合在課堂分組討論，或在選定方法後作為最後一輪檢核，目的在練習比較相鄰方法之間的界線。</p>
+  <div id="crossbody"></div>
+</section>
+</main>
+<footer class="foot">國立臺灣師範大學 115-1 教育與社會科學研究法・質性研究方法特性與引導性問題</footer>
+
+<script>
+var INTRO="針對「質性研究方法參考」十二種方法，整理其特性，並附上引導性問題，讓研究生在選方法與寫第三章之前先自我檢核。特性整理只抓判斷適不適合時最關鍵的幾點，細節與出處請回到網站方法卡的 15 欄。";
+var M=[
+{id:"case",name:"個案研究法",en:"Case Study Research",lv:"取徑",
+lead:"個案研究在真實脈絡中，以多元證據深入探究一個有界限的系統，回答「如何」與「為什麼」。",
+feat:["研究對象是一個有界系統，例如一所學校、一個方案、一個社群，界線要能寫出誰、哪裡、何時、什麼。","證據必須多元，文件、檔案、訪談、觀察、人造物交互印證；只有訪談稱不上個案研究。","選的是個案而非樣本，多重個案依複製邏輯選取，不承諾統計代表性。","分析先做個案內分析，再做跨個案比較，並主動檢驗對立解釋。","推論屬於分析類推與自然類推，讀者依深厚描述自行判斷可移轉性。","Yin 偏設計與命題，Stake 偏個案獨特性，研究者要意識到自己站在哪條路線。"],
+q:[["你的研究對象能否用一句話畫出四條邊界（誰、哪裡、何時、什麼不算）？若畫不出來，主題是否還沒收斂？","研究問題需要脈絡才能回答嗎？若把學校背景拿掉，問題還成立，可能更適合訪談研究或調查。","你感興趣的是這個個案本身（本質型），還是借這個個案理解某個議題（工具型）？"],
+["為什麼是這個個案？除了「我在這裡服務」之外，能否說出它在研究問題上的關鍵性、獨特性或啟示性？","若採多重個案，你預期各案結果相似（字面複製），還是因某個條件不同而呈現對比（理論複製）？","個案內有沒有次分析單位（行政團隊、教師社群、家長）？整體式或嵌入式設計會如何影響資料蒐集？"],
+["你能取得哪些非訪談證據？請列出至少三類文件或觀察場合。","若訪談說法與會議紀錄不一致，你打算怎麼處理這個落差？","你的研究資料庫與證據鏈表要怎麼建，讓口委能從結論追回原始證據？"],
+["你預想的對立解釋是什麼？要蒐集什麼證據才能排除或保留它？","個案越小越容易被認出，改校名之外，還有哪些細節要模糊化？","若你是該校的主任或承辦人，受訪同事敢不敢說真話？由誰邀約比較合適？"]]},
+{id:"gt",name:"紮根理論",en:"Grounded Theory",lv:"取徑",
+lead:"紮根理論以理論抽樣與持續比較，從資料中建構能解釋某一社會歷程的實質理論；屬於方法論層次，光會開放編碼並不等於做了紮根理論。",
+feat:["研究焦點是歷程，例如如何轉變、如何因應、在什麼條件下走向不同結果。","資料蒐集與分析交錯進行，第一份逐字稿就要開始分析，並據以決定下一位受訪者（理論抽樣）。","持續比較貫穿全程，事件與事件、事件與類別、類別與類別逐層比較。","產出是彼此有關係的概念類別與核心類別，最好附理論模型圖，主題清單不算理論。","三派立場不同，Glaser 重理論浮現，Strauss 與 Corbin 重程序與典範模式，Charmaz 視理論為共同建構，論文需擇一並說明。","飽和是針對類別判斷，要說得出哪個類別在第幾次訪談後不再出現新屬性。"],
+q:[["你的研究問題能否改寫成「……如何從甲走到乙？其間經歷哪些階段、受哪些條件影響？」若改寫不出來，可能比較接近現象學或主題分析。","這個現象在臺灣脈絡中真的缺乏合用理論嗎？你在第二章找到的理論，為什麼解釋不了？","你採哪一派？你的認識論立場能否和這一派一致，避免一邊說理論自然浮現、一邊用預設的典範模式？"],
+["初始立意抽樣的條件是什麼？分析後你預期可能往哪些方向做理論抽樣？","你的時程是否允許依分析結果回頭追加受訪者或再訪？同意書有沒有預告可能再訪？","第二章讀過的理論，在你的研究中扮演敏感性概念，還是要被套用的研究架構？"],
+["你會在什麼時間點、用什麼格式寫 memo？每份 memo 是否記錄類別的定義、屬性、條件與疑問？","你怎麼判斷某個代碼值得升格為聚焦碼或類別？","你的核心類別要能串起其他類別，若現在只能列出五個並列主題，彼此的關係是什麼？"],
+["你如何證明「已達飽和」，而不只是「訪完預定人數」？","理論抽樣、持續比較、類別關係、memo 軌跡四項中，你的設計缺了哪一項？缺兩項以上時，是否該誠實改稱主題分析？","你的受訪者若都是同縣市的校長或主任，職稱加年資是否已足以讓人辨識？"]]},
+{id:"narr",name:"敘事研究",en:"Narrative Inquiry",lv:"取徑",
+lead:"敘事研究蒐集並重述個人的生命故事，理解人如何以故事為經驗賦予意義、建構認同；研究重點放在敘事者怎麼排列與評價事件，事件是否完全屬實則居其次。",
+feat:["以 Bruner 所說的敘事思維做研究，關注事件序列與隱含其中的評價。","分析在時間、互動、情境三個層面展開（Clandinin 與 Connelly 的三維探究空間）。","人數少、深度高，常是一位到數位參與者，需要多次訪談與長期信任關係。","研究者與參與者共同建構故事，研究者像助產士，既投入又要退後一步看。","分析可採 Lieblich 等人的整體或類別、內容或形式架構，保留故事的整體性與時間性。","「敘事」一詞有多種用法，教育敘說探究與 Neuman 偏歷史社會學的敘事分析屬不同傳統。"],
+q:[["你的研究問題關心的是「這個人如何述說與理解」，還是「事件實際如何發生」？後者也許更適合歷史研究或個案研究。","為什麼這個問題需要保留一個人故事的完整性？若切成主題也能回答，敘事的價值在哪裡？","你採用的是哪一種敘事傳統？能否用一句話說明本研究中「故事」與「敘說」的區分？"],
+["為什麼是這（幾）位參與者的故事？對方是否經歷了關鍵事件，也願意且能夠反思？","你預計見面幾次、橫跨多久？第一次見面就進入敏感故事是否合適？","你自己的故事與參與者的故事有哪些交會？這些交會會讓你特別聽見什麼、略過什麼？"],
+["你打算用什麼開放式邀請讓參與者開始說故事，而不是一問一答？","除了訪談，還有哪些現場文本可以蒐集，例如日誌、照片、信件、教學檔案？","你會先做整體閱讀找核心主題，還是先切段比較？兩種順序會得到什麼不同的理解？"],
+["研究文本中，哪些是參與者的原話、哪些是你的再敘事、哪些是你的詮釋？讀者分得出來嗎？","若參與者讀了研究文本，不同意你的詮釋，你會如何處理？","獨特的生命故事即使化名也可能被認出，你打算如何與參與者討論可辨識的風險？重述創傷時有沒有轉介資源？"]]},
+{id:"oral",name:"口述史研究法",en:"Oral History",lv:"取徑",
+lead:"口述史透過訪談親歷者的口語敘述，重建並詮釋過去的事件與生命經驗，親歷者、歷史、敘述三項要素缺一不可。",
+feat:["對象必須是親歷者或當事人，轉述他人經驗只能作為次要資料。","焦點是歷史事件或時代，個人是進入歷史的窗口；以個人一生為焦點則較接近生活史。","採由下而上的歷史觀，常讓官方紀錄中沒有聲音的人發聲，挑戰主流詮釋。","多數學者主張與檔案、照片、校史等其他資料合併使用，以降低記憶與單一來源的限制。","整理資料有一問一答式與生命史式兩種，分析常用言談分析，關注「怎麼說」與「為什麼這樣說」。","原始錄音常被視為可長期保存的史料，需要另簽口述授權書，處理具名、公開與典藏。"],
+q:[["你要研究的「過去」是哪一個事件或時期？起訖年代能否寫清楚？","這段過去的文字檔案缺了什麼、偏向誰的觀點，使得親歷者的口述成為必要？","你的焦點是事件（多位親歷者談同一事件），還是個人（一位親歷者的生命歷程）？"],
+["你是否納入了不同位置的親歷者，例如決策者、執行者、受影響者？只訪一種位置時，研究問題是否要縮小？","受訪者多為年長者，你如何預留補訪時間？關鍵人物已無法受訪時，替代受訪者如何選？","你與這段歷史、這群受訪者是什麼關係？校友或後繼者的身分會如何影響信任與詮釋？"],
+["訪談前你準備了哪些檔案與事件年表，讓自己能當場追問與核對？","有沒有老照片、物件或校刊可以作為喚起回憶的觸媒？","轉寫時你會如何保留笑聲、停頓、哽咽等非口語訊息？"],
+["對於時間、人物、經過等事實層的說法，你用什麼來源交叉核對？對於感受與評價等意義層的說法，你又打算如何分析？","受訪者記錯或前後矛盾時，你會把它當成需要修正的錯誤，還是值得分析的資料？理由是什麼？","受訪者是否在訪談前就書面選擇了具名或匿名、可否公開、是否典藏與封存年限？談到創傷記憶時如何中止與轉介？"]]},
+{id:"ar",name:"行動研究法",en:"Action Research",lv:"取徑",
+lead:"行動研究由實務工作者在自己的現場，以規劃、行動、觀察、反思的循環改善實務，同時生產對實務有用的知識。",
+feat:["研究者與實務者常是同一人，研究場域就是自己的工作場域。","方案會依資料修正，修正歷程本身就是研究發現；至少兩輪循環，通常三輪。","強調民主參與與協同合作，協同夥伴與諍友的角色要寫清楚。","成效判斷不能只靠自評，需要基準資料、多方證據、第二評分者與誠實呈現未成功之處。","教師研究自己班級時有雙重角色，同意程序與成績脫鉤是倫理設計的核心。","結果屬實踐知識，以厚實描述讓讀者判斷可遷移性，不推論到全體。"],
+q:[["你的研究問題裡有沒有「我（們）可以怎麼做」？若只是想了解現況，比較接近訪談研究或個案研究。","你有權限也有時間在一學期以上調整自己的做法嗎？","你想做的屬於技術、實務或批判解放哪一種形式？你期待改變的是教學技巧、專業判斷，還是不公平的結構？"],
+["行動前你準備蒐集哪些基準資料，讓最後能比較「改變了什麼」？","協同夥伴是誰、何時參與、意見如何影響決策？誰來擔任挑戰你詮釋的諍友？","若研究對象是自己的學生，誰來說明研究與收同意書？研究資料如何與成績完全脫鉤？"],
+["每一輪結束時，你用什麼資料回答「什麼有效、什麼沒效、下一輪改什麼」？","反思日誌如何區分「發生了什麼」與「我的詮釋」？","若第一輪就發現策略對部分學生不利，你會如何立即調整？"],
+["同一個改變，你能拿出至少兩類證據嗎（例如作品加協同觀察）？","你的設計比較像行動研究、教學紀錄、方案評鑑，還是單組前後測？差別在哪裡？","描寫同校同事時，即使匿名，同校人士能否認出？負面事件要如何審慎處理？"]]},
+{id:"hist",name:"歷史研究與比較研究",en:"Historical-Comparative Research",lv:"取徑",
+lead:"歷史比較研究以史料與跨脈絡比較，解釋制度與社會如何形成、為何不同；林淑馨分成兩法介紹，Neuman 則合為一個取徑。",
+feat:["處理研究者無法直接觀察、也無法操弄的過去或鉅觀現象，證據有限而且間接。","史料需經外部評鑑（真偽）與內部評鑑（可信度），並留意留存偏誤與菁英偏誤。","解釋採組合解釋與過程追蹤，避免把時間先後當成因果，也避免後見之明造成的「必然」。","比較需要共同基準點，並檢查語彙、脈絡、概念、測量四種等值。","比較單位要能相提並論，並留意 Galton 問題，相同模式可能來自政策擴散。","第二章的文獻回顧不等於歷史研究，歷史研究要有一手史料與關於過去的研究問題。"],
+q:[["你要回答的是「發生了什麼、為什麼」，還是「親歷者如何經驗與詮釋」？前者偏歷史研究，後者偏口述史。","你的時間斷限從哪個事件開始、到哪個事件結束？理由是什麼？","若要比較，你的比較基準（林淑馨所說的「甜度」）是什麼？能否在研究問題裡就寫出來？"],
+["你選這幾個國家、縣市或時期的理論理由是什麼？它們在哪些地方相似、哪些地方相異？","比較單位是否層級一致？國家是否真的是最相關的單位，還是會遮蔽國內差異？","你的一手史料在哪裡、能否取得、需要哪些語言能力？"],
+["每份重要史料，你會問哪些外部與內部評鑑的問題？","你準備如何組織證據，例如大事年表、證據矩陣、比較矩陣？","哪些證據可作為關鍵指標，哪些只算支持性證據？"],
+["你有沒有用今天的概念描述過去（時代錯誤），或把政策文本當成現場事實（反射模型）？","多國出現相同制度時，你如何排除「只是政策借用」的可能？你打算駁斥哪些替代解釋？","學籍、輔導、懲處紀錄或私人日記即使是歷史檔案，你如何取得授權與去識別化？用 AI 摘要史料後，是否逐條回到原件核對？"]]},
+{id:"iv",name:"深度訪談法",en:"In-depth Interview",lv:"技術",
+lead:"深度訪談是有目的、可彈性追問的對話，取得受訪者以自己的話說出的經驗與詮釋；它是放在某個取徑裡使用的工具，單寫「採訪談法」不等於交代了研究設計。",
+feat:["適合探究經驗、意義、動機與事件來龍去脈，無法回答分布或因果效果。","質性研究多採半結構式，大綱只是提示，可調整順序與追問。","研究問題要轉成受訪者熟悉的語言與具體經驗，每個核心題下預寫追問。","立意取樣，人數以資料飽和或資訊力說明理由。","訪談取得的是受訪者的陳述，與實際行為可能有落差，常需搭配觀察或文件。","權力關係不必然平等，局內人訪談同事或學生時要特別處理自願性。"],
+q:[["你的研究問題問的是「如何經驗、如何理解」，還是「有多少人、是否有效」？","你想知道的是人們怎麼說，還是人們實際怎麼做？若是後者，只靠訪談夠嗎？","這次訪談放在哪一個取徑裡（個案、現象學、敘事、紮根理論）？取徑不同，大綱與分析也會不同。"],
+["從研究問題到探究面向，再到訪談題目，你能畫出這條轉換路徑嗎？","你的大綱裡有沒有雙重提問、封閉式起手、預設前提？每題是否預寫了兩個追問？","你與受訪者是什麼關係？若是同事、部屬或學生，如何降低對方不敢拒絕或說研究者想聽的話？"],
+["試訪後你改了哪些題目？為什麼？","受訪者說「我通常會……」時，你會怎麼追問具體事件，降低社會期許偏誤？","每場結束後你會寫什麼樣的訪後札記，讓它成為下一場訪談與分析的起點？"],
+["你如何判斷資料已趨飽和？在第幾位受訪者之後不再出現新主題？","受訪者前後說法矛盾時，你會把它刪掉、追問，還是當作資料？","錄音與逐字稿如何在本機轉譯與去識別化？「某偏鄉唯一的原住民族實驗小學校長」這類描述是否等於點名？"]]},
+{id:"fg",name:"焦點團體訪談法",en:"Focus Group Interview",lv:"技術",
+lead:"焦點團體由主持人催化小團體針對特定議題互動討論，資料來自成員之間的互動，個人意見的加總只是其中一部分。",
+feat:["適合找出群體的共識與分歧、解釋量化結果、探索共通語言尚未形成的經驗。","團體內同質有助對話，團體間異質有助比較；分組矩陣是設計的骨架。","人數各家說法不同，潘為 8 到 12 人或迷你團體 4 到 6 人，教育研究常以 6 到 8 人較可行。","分析單元以場次為主，引文標示場次與成員代號，並描述互動脈絡。","團體動力是雙面刃，能激發觀點，也可能造成從眾與少數人主導。","研究者無法保證其他成員保密，敏感議題與上下級同組都不適合。"],
+q:[["你需要的是群體觀點與互動，還是個人經驗的深處？後者在同儕面前說得出口嗎？","你的研究和「專家座談」「說明會」有什麼不同？若目的是蒐集建議或形成共識，是否應如實改稱？","焦點團體在你的研究中是主要方法，還是用來解釋問卷結果或發展問卷的輔助方法？"],
+["你的分組矩陣長什麼樣子？每組成員同質的依據是什麼，組間要比較的差異是什麼？","每一類成員打算辦幾場？只辦一場時，如何區分「這組人的特殊性」與「這類人的共同觀點」？","成員彼此認識嗎？有沒有上下級或評價關係會壓抑發言？誰來主持比較中立？"],
+["你的提問路徑是否包含開場、引入、轉換、關鍵、結束五類問題？關鍵題是否設計成能讓成員彼此回應？","遇到兩三位健談者主導、其他人沉默時，你準備用什麼技術（便利貼、點名邀請、投射技術）？","助理主持人要記錄哪些東西，讓轉譯時分得出誰在說話？"],
+["分析時你如何避免寫成「八位受訪者中有五位認為」？如何判斷一個主題的重要性，除了出現次數之外？","每項議題結束時，你會怎麼口頭收束，讓成員當場確認你的理解？","同意書如何說明「研究者無法保證其他成員保密」？線上進行時，如何避免平台的雲端錄影與自動字幕？"]]},
+{id:"obs",name:"參與觀察與田野研究",en:"Participant Observation / Field Research",lv:"技術",
+lead:"參與觀察讓研究者進入自然情境長期涉入，邊看邊想地系統記錄人們實際怎麼做，以及這些行動對當事人的意義。",
+feat:["適合研究行動與互動的歷程，尤其是說法與做法之間可能有落差的現象。","研究者角色是一條光譜，從完全參與者到完全觀察者，論文中要附英文並自行定義。","觀察由描述觀察、焦點觀察到選擇觀察逐步聚焦，時間、地點、人、事件四種抽樣都要涵蓋。","田野筆記要把直接觀察、推論、分析備忘、個人筆記分開，並在當天擴寫。","局內人研究容易因熟悉而盲目，需要「化熟悉為新奇」與反身性作法。","學校場域一律公開研究者身分，未成年學生需家長與本人同意，錄影只作補充。"],
+q:[["你的研究問題關心人們「實際怎麼做」嗎？哪些現象只有在現場才看得到？","你只是進班觀察，還是長期駐點並同時訪談、蒐集文件？前者寫參與觀察，後者可寫田野研究，你採哪本書的界定？","你的研究者出現在現場，會不會大幅改變被觀察者的行為？需要多少次才能接近日常？"],
+["在角色光譜上你站在哪裡？哪些事你會做、哪些不做？這個位置會不會隨時間改變？","誰是正式守門員、誰是非正式守門員？校長太熱心推薦時，教師會不會把你當成「校方派來的人」？","你的觀察時段是否涵蓋一般週、段考週、不同課別與不同空間？"],
+["試著把「學生很不專心」改寫成直接觀察的句子，你會寫什麼？","你每次觀察後多久完成擴寫筆記？觀察與推論分欄記錄了嗎？","你記錄了「預期會發生卻沒發生」的事嗎？"],
+["若在自己學校觀察，你如何處理同事把你當成某個角色、你自己又把許多事視為理所當然的問題？","你準備用 Neuman 的信度效度語彙，還是 Lincoln 與 Guba 的信實度四準則？兩者有沒有混用？","觀察中若得知體罰或霸凌，你的通報義務與保密承諾如何在同意書中事先說明？何時、如何離開田野？"]]},
+{id:"pv",name:"影像發聲法",en:"Photovoice",lv:"技術",
+lead:"影像發聲讓參與者自己拍攝生活中的照片，藉照片討論處境並向決策者發聲，拍、談、傳三個動作環環相扣；上位取徑通常是參與式行動研究。",
+feat:["理論來源包括 Freire 的批判教育學、紀實攝影的「由內向外看」、女性主義的平等知識生產。","適合讓受政策影響最大卻少有發言管道的群體發聲，也適合不習慣用語言表達的參與者。","團體討論以 SHOWeD 提問引導，參與者經歷挑選照片、脈絡化、譯碼三階段。","照片意義由拍攝者說明，挑選與詮釋權在參與者，研究者不宜單獨解讀照片內容。","決策者應從一開始就參與，並以展出或座談把聲音傳出去。","倫理比一般訪談多一層，照片本身可識別，且常拍到未同意的第三人，需要三種同意書。"],
+q:[["你的研究除了理解，還期待促成什麼改變？有沒有決策者願意聆聽？","你的設計包含集體討論與傳播嗎？若只是請受訪者帶照片來訪談，是否應改稱照片引談？","研究問題是否窄到照片能夠回答？抽象概念要怎麼轉成參與者可以按快門的提示？"],
+["參與者是誰？你如何納入表達能力較弱的成員，避免此法偏好會說話的人？","若你是參與學生的老師，學生會不會只拍老師想看的？誰來主持討論比較合適？","預計幾輪拍攝與討論？成果在哪裡展出、邀請誰參與？"],
+["培訓時你會如何練習「請別人同意被拍」與「不拍可辨識人臉也能表達」？","學生用自己的手機拍攝時，如何處理雲端自動備份與 GPS 等中繼資料？","若學生拍了一張空蕩的公車站，你如何避免自行解讀，讓拍攝者說出照片對自己的意義？"],
+["你的分析對象是照片本身、照片說明，還是團體討論？研究者的主題分析如何回到團體確認？","參與者同意書、被拍攝者同意書、照片使用授權書，你各準備好了嗎？未成年參與者的家長同意呢？","公開展出可能讓參與者被認出或被貼標籤，展出設計如何與參與者共同決定、逐張確認？"]]},
+{id:"phen",name:"現象學研究",en:"Phenomenological Research",lv:"簡介",
+lead:"現象學研究描述多位經歷者對同一現象的生活經驗，找出經驗的共同結構與意義；讀本只在研究設計一章當作認識論提到，正式採用前請讀原典。",
+feat:["回答「經歷這件事是什麼樣的經驗、意味著什麼」，避免「為什麼」與「受哪些因素影響」。","所有參與者都必須親身經歷該現象，樣本小而同質。","描述現象學（Husserl、Moustakas）重存而不論與本質描述；詮釋現象學（Heidegger、van Manen）承認前理解並以寫作反思；IPA 強調雙重詮釋。","研究者要放入括弧，或把前理解寫出來並持續回看。","分析步驟依所選學者而定，例如 Moustakas 的水平化、意義單元、文本與結構描述、本質描述。"],
+q:[["你的研究問題能否寫成「……的生活經驗為何」？若問的是歷程或條件，是否更適合紮根理論？","你想呈現的是多人經驗的共同結構，還是一個人的完整故事（敘事研究）？","你採描述現象學、詮釋現象學，還是 IPA？這個選擇和你對「研究者能否放下預設」的看法一致嗎？"],
+["參與者「親身經歷該現象」的判準是什麼？只是聽說過的人是否要排除？","你自己有沒有這個經驗？分析前你會用什麼方式寫下自己的預設？"],
+["你的訪談題目是在邀請描述經驗，還是在邀請評價或解釋？試著各舉一題比較。","你依哪位學者的分析步驟？每一步的產物是什麼？"],
+["你如何說明括弧化的做法與限制，而不宣稱「已完全存而不論」？","你的本質描述交還參與者時，對方是否認得出這是自己的經驗？","經驗若私密或痛苦，你如何允許跳過問題、備妥轉介資源？"]]},
+{id:"eth",name:"民族誌",en:"Ethnography",lv:"簡介",
+lead:"民族誌以局內人視角長期涉入場域，深描一個群體的文化與日常意義；以參與觀察為主要方法，以描述文化為目的。讀本未設專章，正式採用前請讀原典。",
+feat:["回答「這個群體的日常怎麼運作、成員共享哪些規則、行話與意義」。","需要長期在場，幾次參訪加訪談稱不上民族誌。","研究問題常在進場後才聚焦，可以從問題找場域，也可以從場域長出問題。","分析重深厚描述，可用 Spradley 的領域分析，區分民俗領域與研究者的分析領域。","類型包括寫實、批判、學校教育、自我、數位民族誌。","民族誌（ethnography）與俗民方法論（ethnomethodology）名稱相近，研究焦點不同。"],
+q:[["你想了解的是一群人的共享文化，還是幾位個人的經驗？後者是否更適合訪談或現象學？","你能在場多久？若只能一學期幾次，是否應改稱個案研究或田野觀察？","你採哪一種民族誌？若是批判民族誌，你要揭露的權力關係是什麼？"],
+["你的場域與群體邊界在哪裡？關鍵報導人是誰、為什麼是對方？","你是局內人還是局外人？在觀察者角色光譜上站在哪個位置？"],
+["成員日常使用哪些行話或自創分類（例如學生口中的「水課」「涼課」）？你如何記錄並追問其意義？","你的田野筆記如何分成實地、個人、方法、理論四部分？"],
+["你的文本裡，局內人的語言與觀點保留了多少？研究者的評論有沒有取代成員的聲音？","長期在場模糊了研究者與成員的界線時，你如何維持分析距離，又不失去信任？","學校民族誌涉及未成年學生，你如何取得家長同意與學校許可，並在筆記中以代號記錄？"]]}
+];
+var STAGES=["定位","設計","執行","品質與倫理"];
+var CMP_H=["時間長度","所需人力","資料收集技術複雜性","空間範圍","經費成本"];
+var CMP=[
+["個案研究","中至高，一學期至一年，多重個案更長","中，單一個案一人可行，多重個案宜有第二分析者","高，文件、訪談、觀察、人造物並用，還要建資料庫與證據鏈","單一場域至跨校跨縣市","中，多場域時交通與轉譯增加"],
+["紮根理論","中至高，約 6 到 12 個月，需邊分析邊追加受訪者","低至中，研究者親自訪談與編碼，宜有同儕檢核","中，以訪談為主，持續比較與 memo 負擔重","依理論抽樣可能擴及多校","中，訪談次數多，轉譯與交通累積"],
+["敘事研究","中，多次訪談橫跨數月","低，研究者一人","中，訪談加個人文件，分析重整體閱讀","小，一位至數位參與者","低"],
+["口述史研究","中至高，找受訪者、準備檔案、補訪耗時","低至中，可能需族語或台語協助","中，訪談、檔案、照片並用，另需授權書與典藏安排","受訪者可能分散各地","中，交通、翻譯、典藏"],
+["行動研究","高，至少兩到三輪，一學期以上","中，需協同夥伴、諍友、第二評分者","中至高，每一輪都要蒐集多種資料","小，研究者自己的現場","低至中，教材與錄影設備"],
+["歷史比較研究","高，找檔案、評鑑史料、處理外文","低至中，可能需語言協助","高，史料評鑑與四種等值性檢查","大，跨國或跨時期，多在檔案館進行","中至高，跨國調檔與翻譯；單一國家單一時期較低"],
+["深度訪談","低至中，1 小時訪談約需 6 到 8 小時轉譯","低","低至中，大綱與追問設計需練習","彈性，可線上進行","低"],
+["焦點團體","低至中，每場 1 到 2 小時，招募協調耗時","中，主持人加助理主持人","中，主持技巧與多人發言的轉譯辨識","需集中一地，每類成員宜多場","中，場地、茶點、車馬費、雙錄音設備"],
+["參與觀察","高，一學期以上，每週一到兩次，另需約一半時間寫筆記","低至中","中至高，角色協商與分層筆記","小，單一場域","低至中，往返頻繁的交通"],
+["影像發聲","中至高，招募、培訓、兩到三輪拍攝討論、展出","中至高，主持、輔助者，還要協調決策者","高，設備、三種同意書、照片去識別化、展出","社區或學校","中至高，設備、展出與印刷"],
+["現象學研究","低至中","低","低至中，以訪談為主，分析步驟需嚴謹","小，數位至十餘位同質參與者","低"],
+["民族誌","最高，數月至一年以上長期在場","低，多為研究者一人長期投入","高，長期觀察、訪談、文件交織","單一場域，涉入深","中，長期交通或住宿"]
+];
+var CROSS=[
+["相鄰方法的分辨",["同一個主題「偏鄉教師的留任」，分別用個案研究、紮根理論、敘事研究、現象學來問，研究問題各會怎麼寫？四種寫法要的資料有何不同？","訪談五位教師、歸納出四個主題，這樣的研究在什麼條件下可以稱為個案研究、紮根理論或現象學？缺了什麼就只能稱為主題分析？","口述史與歷史研究都處理過去，主要證據與研究問題的差別在哪裡？兩者合用時，誰是主、誰是輔？","參與觀察與民族誌的差別，是在場時間長短，還是研究目的不同？請舉一個教育場域的例子說明。","行動研究、方案評鑑、單組前後測都在看「改善」，三者的研究者角色與方案是否會修改，各有什麼不同？"]],
+["取徑與技術的搭配",["你選定的取徑，最主要的資料蒐集技術是哪一種？為什麼選這一種，而不選網站矩陣表中標為「常用」的其他技術？","若把你的技術換掉（例如把訪談換成焦點團體），研究問題還回答得了嗎？答案會有什麼改變？"]],
+["研究者的位置",["在你的研究中，你是局內人、局外人，還是介於之間？這個位置在選樣、進場、資料品質與倫理四方面，各帶來什麼好處與風險？","你的研究問題裡藏著哪些預設？若換一位立場不同的研究者來做，最可能得到不同結論的地方在哪裡？"]],
+["寫成第三章之前",["用三句話向不熟悉質性研究的同事說明，為什麼你的研究問題需要這個取徑，以及你會如何讓讀者相信你的發現。說不清楚的地方，就是第三章需要補強的地方。"]]
+];
+
+(function(){
+  var LS=(function(){var on=false;try{localStorage.setItem("__p","1");localStorage.removeItem("__p");on=true;}catch(e){}
+    return{on:on,get:function(k){if(!on)return null;try{return localStorage.getItem(k);}catch(e){return null;}},
+      set:function(k,v){if(!on)return;try{localStorage.setItem(k,v);}catch(e){}}};})();
+  var $=function(s){return document.querySelector(s);};
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  var KA="qm115-answers",A={};try{A=JSON.parse(LS.get(KA)||"{}");}catch(e){A={};}
+  var root=document.documentElement,th=LS.get("qm115-theme");if(th)root.setAttribute("data-theme",th);
+  function isDark(){var t=root.getAttribute("data-theme");if(t)return t==="dark";return window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches;}
+  function paintTheme(){$("#theme").textContent=isDark()?"☀️ 淺色":"🌙 深色";}
+  paintTheme();
+  $("#intro").textContent=INTRO;
+  if(!LS.on)$("#lsnote").textContent="　這個瀏覽器封鎖了網站資料，作答不會被記住，請記得匯出。";
+
+  function qhtml(key,n,text){var v=A[key]||"";
+    return '<div class="q'+(v?" has":"")+'" data-k="'+key+'"><div class="qt"><span class="qn">'+n+'</span><div class="qx">'+esc(text)+
+      '</div><button class="tg" type="button">寫下想法</button></div><textarea aria-label="我的想法">'+esc(v)+'</textarea></div>';}
+  function pills(id,cur){var h="",last="";M.forEach(function(m){if(m.lv!==last){h+='<span class="lvl">'+m.lv+'</span>';last=m.lv;}
+    h+='<button class="pill lv-'+m.lv+(m.id===cur?" on":"")+'" data-m="'+m.id+'">'+esc(m.name)+'</button>';});$(id).innerHTML=h;}
+  function count(m){var t=0,d=0;m.q.forEach(function(g,gi){g.forEach(function(_,qi){t++;if(A[m.id+"-"+gi+"-"+qi])d++;});});return [d,t];}
+  function renderM(id){var i=0;M.forEach(function(m,k){if(m.id===id)i=k;});var m=M[i];
+    pills("#mpills",m.id);var c=count(m),n=0;
+    var h='<div class="mhead lv-'+m.lv+'"><span class="lvtag">'+m.lv+'</span><h2>'+esc(m.name)+' <i>'+esc(m.en)+'</i></h2><p>'+esc(m.lead)+'</p></div>';
+    h+='<div class="card"><h3 class="sub">特性重點</h3><ul class="feat">'+m.feat.map(function(f){return "<li>"+esc(f)+"</li>";}).join("")+'</ul></div>';
+    h+='<div class="card"><h3 class="sub">引導性問題</h3><div class="prog" id="prog">已作答 '+c[0]+' ／ '+c[1]+' 題</div>';
+    m.q.forEach(function(g,gi){h+='<div class="qgroup"><h4>'+STAGES[gi]+'</h4>';g.forEach(function(t,qi){n++;h+=qhtml(m.id+"-"+gi+"-"+qi,n,t);});h+='</div>';});
+    h+='</div><div class="navrow">'+(i>0?'<button class="btn" data-m="'+M[i-1].id+'">← '+esc(M[i-1].name)+'</button>':'<span></span>')+
+      (i<M.length-1?'<button class="btn pri" data-m="'+M[i+1].id+'">'+esc(M[i+1].name)+' →</button>':'')+'</div>';
+    $("#mbody").innerHTML=h;}
+  function lvClass(s){var t=s.split("，")[0];return {"低":"c1","低至中":"c2","中":"c3","中至高":"c4","高":"c5","最高":"c6"}[t]||"";}
+  function renderCmp(){var h="<thead><tr><th>方法</th>"+CMP_H.map(function(x){return "<th>"+x+"</th>";}).join("")+"</tr></thead><tbody>";
+    CMP.forEach(function(r){h+="<tr><td>"+esc(r[0])+"</td>";for(var j=1;j<r.length;j++){var s=r[j],cl=j===4?"":lvClass(s),p=s.indexOf("，");
+      if(cl){var lv=p>0?s.slice(0,p):s,nt=p>0?s.slice(p+1):"";h+='<td><span class="lv '+cl+'">'+esc(lv)+'</span>'+(nt?'<span class="nt">'+esc(nt)+'</span>':"")+"</td>";}
+      else h+='<td><span class="nt" style="color:var(--ink)">'+esc(s)+"</span></td>";}h+="</tr>";});
+    $("#cmptable").innerHTML=h+"</tbody>";}
+  function renderCross(){var h="",n=0;CROSS.forEach(function(g,gi){h+='<div class="card"><h3 class="sub">'+esc(g[0])+'</h3>';
+    g[1].forEach(function(t,qi){n++;h+=qhtml("x-"+gi+"-"+qi,n,t);});h+="</div>";});$("#crossbody").innerHTML=h;}
+
+  function go(h){h=(h||"home").replace("#","");var tab=h,mid=null;
+    if(h.indexOf("m-")===0){tab="m";mid=h.slice(2);}else if(h==="m"){mid=M[0].id;}
+    var el=document.getElementById("tab-"+tab);if(!el){tab="home";el=$("#tab-home");}
+    Array.prototype.forEach.call(document.querySelectorAll(".tabsec"),function(s){s.classList.toggle("on",s===el);});
+    Array.prototype.forEach.call(document.querySelectorAll("nav.tabs button"),function(b){b.classList.toggle("on",b.dataset.tab===tab);});
+    if(tab==="m")renderM(mid||M[0].id);
+    window.scrollTo(0,0);}
+  document.addEventListener("click",function(e){
+    var t=e.target.closest("[data-tab]");if(t){location.hash=t.dataset.tab==="m"?"m-"+M[0].id:t.dataset.tab;return;}
+    var p=e.target.closest("[data-m]");if(p){location.hash="m-"+p.dataset.m;return;}
+    var g=e.target.closest(".tg");if(g){var q=g.closest(".q");q.classList.toggle("open");if(q.classList.contains("open"))q.querySelector("textarea").focus();return;}
+    if(e.target.closest("#theme")){var d=isDark();root.setAttribute("data-theme",d?"light":"dark");LS.set("qm115-theme",d?"light":"dark");paintTheme();return;}
+    if(e.target.closest("#exp")){exportA();}
+  });
+  document.addEventListener("input",function(e){var ta=e.target;if(ta.tagName!=="TEXTAREA")return;var q=ta.closest(".q");
+    var k=q.dataset.k;if(ta.value.trim())A[k]=ta.value;else delete A[k];q.classList.toggle("has",!!A[k]);LS.set(KA,JSON.stringify(A));
+    var pr=$("#prog");if(pr&&k.indexOf("x-")!==0){M.forEach(function(m){if(k.indexOf(m.id+"-")===0){var c=count(m);pr.textContent="已作答 "+c[0]+" ／ "+c[1]+" 題";}});}});
+  function exportA(){var out="# 質性研究方法引導性問題・我的作答\n\n匯出時間 "+new Date().toLocaleString()+"\n\n",any=false;
+    M.forEach(function(m){var blk="",n=0;m.q.forEach(function(g,gi){g.forEach(function(t,qi){n++;var v=A[m.id+"-"+gi+"-"+qi];if(v)blk+="### "+n+". "+t+"\n"+v+"\n\n";});});
+      if(blk){any=true;out+="## "+m.name+"\n\n"+blk;}});
+    var blk2="",n2=0;CROSS.forEach(function(g,gi){g[1].forEach(function(t,qi){n2++;var v=A["x-"+gi+"-"+qi];if(v)blk2+="### "+n2+". "+t+"\n"+v+"\n\n";});});
+    if(blk2){any=true;out+="## 跨方法的綜合思考題\n\n"+blk2;}
+    if(!any){alert("目前還沒有作答內容。");return;}
+    var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([out],{type:"text/plain;charset=utf-8"}));
+    a.download="質性研究方法_我的作答.txt";document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},500);}
+
+  pills("#homepills",null);renderCmp();renderCross();
+  window.addEventListener("hashchange",function(){go(location.hash);});
+  go(location.hash);
+})();
+</script>
+</body>
+</html>
